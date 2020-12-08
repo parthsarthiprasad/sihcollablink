@@ -95,7 +95,6 @@ if __name__ == "__main__":
     elif opt.is_client:
         from afy import predictor_remote
         try:
-            from Local_Predictor import Predictor
             predictor = predictor_remote.PredictorRemote(
                 in_addr=opt.in_addr, out_addr=opt.out_addr,
                 **predictor_args
@@ -105,7 +104,8 @@ if __name__ == "__main__":
             sys.exit(1)
         predictor.start()
     else:
-        model_dir = "../vacm/Functional_Mask_Trial_3.h5"
+        from Local_Predictor import Predictor
+        model_dir = "../vcam/Functional_Mask_Trial_3.h5"
         predictor = Predictor(model_dir,"../vcam/shape_predictor_68_face_landmarks.dat")
         )
 

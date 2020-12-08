@@ -43,32 +43,32 @@ class Local_Predictor():
             mask = cv2.resize(mask,self.input_shape[:2])
         return self.model.predict([[frame],[mask.astype(np.float16)]])[0]
             
-# Run
-pred = Local_Predictor(model_dir,"F:/Models/shape_predictor_68_face_landmarks.dat")
-vid = cv2.VideoCapture(0)
-run = True
-while(run):
-    run,img = vid.read()
-    if(run!=True):
-        break
-    input_mask = np.ones((128,128,3))
-    coords = pred.extract_landmarks(img)
-    if(type(coords)!=int): 
-        face_coords,eye_marks = coords
-        if(face_coords[3]>img.shape[0]):
-            face_coords[3] = img.shape[0]
-        if(face_coords[1]>img.shape[1]):
-            face_coords[1] = img.shape[1]
-        input_img = cv2.resize(img[face_coords[2]:face_coords[3],face_coords[0]:face_coords[1]],(128,128))/255
-        cv2.fillConvexPoly(input_mask,np.array(eye_marks[0:6]),(0,0,0))
-        cv2.fillConvexPoly(input_mask,np.array(eye_marks[6:12]),(0,0,0))
-        pred_img = pred.predict(input_img,input_mask)
-        pred_img = cv2.resize(pred_img,(face_coords[1]-face_coords[0],face_coords[3]-face_coords[2]))*255
-        img[face_coords[2]:face_coords[3],face_coords[0]:face_coords[1]] = pred_img
-        cv2.imshow("Image",img)
-    else: #Passthrough
-        cv2.imshow("Image",img)
-    if(cv2.waitKey(1)==27):
-        break
-cv2.destroyAllWindows()
-vid.release()
+# # Run
+# pred = Local_Predictor(model_dir,"F:/Models/shape_predictor_68_face_landmarks.dat")
+# vid = cv2.VideoCapture(0)
+# run = True
+# while(run):
+#     run,img = vid.read()
+#     if(run!=True):
+#         break
+#     input_mask = np.ones((128,128,3))
+#     coords = pred.extract_landmarks(img)
+#     if(type(coords)!=int): 
+#         face_coords,eye_marks = coords
+#         if(face_coords[3]>img.shape[0]):
+#             face_coords[3] = img.shape[0]
+#         if(face_coords[1]>img.shape[1]):
+#             face_coords[1] = img.shape[1]
+#         input_img = cv2.resize(img[face_coords[2]:face_coords[3],face_coords[0]:face_coords[1]],(128,128))/255
+#         cv2.fillConvexPoly(input_mask,np.array(eye_marks[0:6]),(0,0,0))
+#         cv2.fillConvexPoly(input_mask,np.array(eye_marks[6:12]),(0,0,0))
+#         pred_img = pred.predict(input_img,input_mask)
+#         pred_img = cv2.resize(pred_img,(face_coords[1]-face_coords[0],face_coords[3]-face_coords[2]))*255
+#         img[face_coords[2]:face_coords[3],face_coords[0]:face_coords[1]] = pred_img
+#         cv2.imshow("Image",img)
+#     else: #Passthrough
+#         cv2.imshow("Image",img)
+#     if(cv2.waitKey(1)==27):
+#         break
+# cv2.destroyAllWindows()
+# vid.release()
