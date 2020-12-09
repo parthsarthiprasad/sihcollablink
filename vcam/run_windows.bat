@@ -2,7 +2,7 @@
 
 call scripts/settings_windows.bat
 
-call conda activate dev
+call conda activate %CONDA_ENV_NAME%
 
 set CONFIG=fomm/config/vox-adv-256.yaml
 
