@@ -1,3 +1,7 @@
+********Parth********
+
+Bro, switch cam_fomm.py file in main folder with the one in afy before execution!!!!
+
 ![](docs/mona.gif)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb)
