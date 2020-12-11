@@ -7,9 +7,9 @@ from tensorflow.keras.models import load_model
 
 # Initializing Parameters
 misses = []
-model_dir = "/content/sihcollablink/Functional_Mask_Trial_3.h5"
+model_dir = "Functional_Mask_Trial_3.h5"
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("/content/sihcollablink/shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 model = load_model(model_dir)
 
 # Class Definition

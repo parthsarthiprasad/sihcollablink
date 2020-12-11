@@ -4,4 +4,4 @@
 CAMID_VIRT=9
 
 # Conda environment name
-CONDA_ENV_NAME=dev
+CONDA_ENV_NAME=avatarify

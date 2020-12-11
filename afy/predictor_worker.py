@@ -103,8 +103,8 @@ class PredictorWorker():
         predictor_args = ()
         timing = AccumDict()
         log = Logger('./var/log/predictor_worker.log', verbose=opt.verbose)
-        model_dir = "../vcam/Functional_Mask_Trial_3.h5" 
-        dlib_dir = "../vcam/shape_predictor_68_face_landmarks.dat"
+        model_dir = "Functional_Mask_Trial_3.h5" 
+        dlib_dir = "shape_predictor_68_face_landmarks.dat"
         try:
             while worker_alive.value:
                 tt = TicToc()
