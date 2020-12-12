@@ -103,8 +103,8 @@ class PredictorWorker():
         predictor_args = ()
         timing = AccumDict()
         log = Logger('./var/log/predictor_worker.log', verbose=opt.verbose)
-        model_dir = "Functional_Mask_Trial_3.h5" 
-        dlib_dir = "shape_predictor_68_face_landmarks.dat"
+        model_dir = "/Functional_Mask_Trial_3.h5" 
+        dlib_dir = "/shape_predictor_68_face_landmarks.dat"
         try:
             while worker_alive.value:
                 tt = TicToc()
@@ -146,7 +146,7 @@ class PredictorWorker():
                         log("Initialized predictor with:", predictor_args, important=True)
                     result = True
                     tt.tic() # don't account for init
-                elif method['name'] == 'predict':
+                else:
                     assert predictor is not None, "Predictor was not initialized"
                     out = frame.copy()
                     coords = predictor.extract_landmarks(out)
@@ -158,12 +158,8 @@ class PredictorWorker():
                         pred_img = getattr(predictor, method['name'])(input_img,input_mask)
                         out[face_coords[2]:face_coords[3],face_coords[0]:face_coords[1]] = cv2.resize(pred_img,(face_coords[1]-face_coords[0],face_coords[3]-face_coords[2]))*255
                     else:
-                        log("Faces Not found.")
-                
+                        log("Faces Not found.")                
                     result = out
-                else:
-                    assert predictor is not None, "Predictor was not initialized"
-                    result = getattr(predictor, method['name'])(*args[0], **args[1])
                 timing.add('CALL', tt.toc())
 
                 tt.tic()

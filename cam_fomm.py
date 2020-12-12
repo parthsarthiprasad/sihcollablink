@@ -9,6 +9,7 @@ from afy.videocaptureasync import VideoCaptureAsync
 from afy.arguments import opt
 from afy.utils import info, Tee, crop, pad_img, resize, TicToc
 import afy.camera_selector as cam_selector
+from Local_Predictor import Local_Predictor
 
 log = Tee('./var/log/cam_fomm.log')
 
@@ -80,34 +81,9 @@ if __name__ == "__main__":
     IMG_SIZE = 256
 
     log('Loading Predictor')
+    model_dir = "Functional_Mask_Trial_3.h5"
     
-    predictor_args = {
-        'config_path': opt.config,
-        'checkpoint_path': opt.checkpoint,
-        'relative': opt.relative,
-        'adapt_movement_scale': opt.adapt_scale,
-        'enc_downscale': opt.enc_downscale
-    }
-    if opt.is_worker:
-        from afy import predictor_worker
-        predictor_worker.run_worker(opt.in_port, opt.out_port)
-        sys.exit(0)
-    elif opt.is_client:
-        from afy import predictor_remote
-        try:
-            predictor = predictor_remote.PredictorRemote(
-                in_addr=opt.in_addr, out_addr=opt.out_addr,
-                **predictor_args
-            )
-        except ConnectionError as err:
-            log(err)
-            sys.exit(1)
-        predictor.start()
-    else:
-        from Local_Predictor import Predictor
-        model_dir = "../vcam/Functional_Mask_Trial_3.h5"
-        predictor = Predictor(model_dir,"../vcam/shape_predictor_68_face_landmarks.dat")
-        )
+    predictor = Local_Predictor(model_dir,"shape_predictor_68_face_landmarks.dat")
 
     cam_id = select_camera(config)
 
