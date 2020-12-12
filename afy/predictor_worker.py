@@ -1,4 +1,4 @@
-from Local_Predictor import Predictor
+from Local_Predictor import Local_Predictor
 from arguments import opt
 from networking import SerializingContext, check_connection
 from utils import Logger, TicToc, AccumDict, Once
