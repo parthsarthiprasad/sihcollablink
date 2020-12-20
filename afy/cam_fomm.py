@@ -106,8 +106,8 @@ if __name__ == "__main__":
     else:
         from Local_Predictor import Local_Predictor
         log('HERER')
-        model_dir = "/Functional_Mask_Trial_3.h5"
-        predictor = Local_Predictor(model_dir,"/shape_predictor_68_face_landmarks.dat")
+        model_dir = "Functional_Mask_Trial_3.h5"
+        predictor = Local_Predictor(model_dir,"shape_predictor_68_face_landmarks.dat")
         
     
     cam_id = select_camera(config)
