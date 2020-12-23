@@ -3,7 +3,7 @@
 
 
 <!-- ![](docs/bhanulisa.gif) -->
-<img src="docs/bhanulisa.gif" width="250" height="250">
+<img src="docs/bhanulisa.gif" width="600" height="500">
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parthsarthiprasad/sihcollablink/blob/master/avatarify.ipynb)
 
