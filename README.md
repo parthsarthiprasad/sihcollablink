@@ -2,32 +2,32 @@
 
 Bro, switch cam_fomm.py file in main folder with the one in afy before execution!!!!
 
-![](docs/mona.gif)
+![](docs/bhanulisa)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parthsarthiprasad/sihcollablink/blob/master/avatarify.ipynb)
 
-[<img src="https://img.shields.io/badge/slack-join-brightgreen?style=flat&logo=slack">](https://join.slack.com/t/avatarify/shared_invite/zt-dyoqy8tc-~4U2ObQ6WoxuwSaWKKVOgg)
+<!-- [<img src="https://img.shields.io/badge/slack-join-brightgreen?style=flat&logo=slack">](https://join.slack.com/t/avatarify/shared_invite/zt-dyoqy8tc-~4U2ObQ6WoxuwSaWKKVOgg) -->
 
-:arrow_forward: [Demo](https://youtu.be/Q7LFDT-FRzs)
+<!-- :arrow_forward: [Demo](https://youtu.be/Q7LFDT-FRzs)
 
-:arrow_forward: [AI-generated Elon Musk](https://youtu.be/lONuXGNqLO0)
+:arrow_forward: [AI-generated Elon Musk](https://youtu.be/lONuXGNqLO0) -->
 
 # Open Avatarify
 
 Photorealistic avatars for video-conferencing [apps](#configure-video-meeting-app). Democratized.
 
-Based on [First Order Motion Model](https://github.com/AliaksandrSiarohin/first-order-model).
+Based on [Generative Convolution Autoencoder](https://github.com/ikostrikov/TensorFlow-VAE-GAN-DRAW).
 
-**Open Avatarify is not affiliated with Avatarify Inc.**
+<!-- **Open Avatarify is not affiliated with Avatarify Inc.** -->
 
-## News
+<!-- ## News
 - **11 July 2020.** Added Docker support. Now you can run Avatarify from Docker on [Linux](#docker). Thanks to [mikaelhg](https://github.com/mikaelhg) and [mintmaker](https://github.com/mintmaker) for contribution!
 - **22 May 2020.** Added [Google Colab](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb) mode. Now you can run Avatarify on any computer without GPU!
 - **7 May 2020.** Added remote GPU support for all platforms (based on [mynameisfiber's](https://github.com/mynameisfiber) solution). [Demo](https://youtu.be/3Dz_bUIPYFM). Deployment [instructions](https://github.com/alievk/avatarify/wiki/Remote-GPU). 
 - **24 April 2020.** Added Windows installation [tutorial](https://www.youtube.com/watch?v=lym9ANVb120).
 - **17 April 2020.** Created Slack community. Please join via [invitation link](https://join.slack.com/t/avatarify/shared_invite/zt-dyoqy8tc-~4U2ObQ6WoxuwSaWKKVOgg).
 - **15 April 2020.** Added [StyleGAN-generated](https://www.thispersondoesnotexist.com) avatars. Just press `Q` and now you drive a person that never existed. Every time you push the button – new avatar is sampled.
-- **13 April 2020.** Added Windows support (kudos to [9of9](https://github.com/9of9)).
+- **13 April 2020.** Added Windows support (kudos to [9of9](https://github.com/9of9)). -->
 
 ## Table of Contents
 - [Requirements](#requirements)
@@ -38,7 +38,7 @@ Based on [First Order Motion Model](https://github.com/AliaksandrSiarohin/first-
     - [Windows](#windows)
     - [Remote GPU](#remote-gpu)
     - [Docker](#docker)
-- [Setup avatars](#setup-avatars)
+<!-- - [Setup avatars](#setup-avatars) -->
 - [Run](#run)
     - [Linux](#linux-1)
     - [Mac](#mac-1)
@@ -51,21 +51,21 @@ Based on [First Order Motion Model](https://github.com/AliaksandrSiarohin/first-
   - [Teams](#teams)
   - [Slack](#slack)
 - [Uninstall](#uninstall)
-- [Contribution](#contribution)
-- [FAQ](#faq)
+<!-- - [Contribution](#contribution) -->
+<!-- - [FAQ](#faq) -->
 - [Troubleshooting](#troubleshooting)
 
 ## Requirements
 
-You can run Avatarify in two modes: *locally* and *remotely*.
+You can run Eye2Eye in two modes: *locally* and *remotely*.
 
-To run Avatarify *locally* you need a CUDA-enabled (NVIDIA) video card. Otherwise it will fallback to the central processor and run very slowly. These are performance metrics for some hardware:
+To run Eye2Eye *locally* you need a CUDA-enabled (NVIDIA) video card. Otherwise it will fallback to the central processor and run very slowly. These are performance metrics for some hardware:
 
 - GeForce GTX 1080 Ti: **33 frames per second**
 - GeForce GTX 1070: **15 frames per second**
 - GeForce GTX 950: **9 frames per second**
 
-You can also run Avatarify *remotely* on [Google Colab](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb) (easy) or on a [dedicated server](https://github.com/alievk/avatarify/wiki/Remote-GPU) with a GPU (harder). There are no special PC requirements for this mode, only a stable internet connection.
+You can also run Eye2Eye *remotely* on [Google Colab](https://colab.research.google.com/github/parthsarthiprasad/sihcollablink/blob/master/avatarify.ipynb) (easy) or on a [dedicated server](https://github.com/parthsarthiprasad/sihcollablink/wiki/Remote-GPU) with a GPU (harder). There are no special PC requirements for this mode, only a stable internet connection.
 
 Of course, you also need a webcam!
 
@@ -95,7 +95,7 @@ bash scripts/install.sh
 
 
 #### Mac
-*(!) Note*: we found out that in versions after [v4.6.8 (March 23, 2020)](https://zoom.us/client/4.6.19178.0323/ZoomInstaller.pkg) Zoom disabled support for virtual cameras on Mac. To use Avatarify in Zoom you can choose from 2 options:
+*(!) Note*: we found out that in versions after [v4.6.8 (March 23, 2020)](https://zoom.us/client/4.6.19178.0323/ZoomInstaller.pkg) Zoom disabled support for virtual cameras on Mac. To use Eye2Eye in Zoom you can choose from 2 options:
 - Install [Zoom v4.6.8](https://zoom.us/client/4.6.19178.0323/ZoomInstaller.pkg) which is the last version that supports virtual cameras
 - Use latest version of Zoom, but disable library validation by running this command in terminal:
 ```bash
@@ -107,10 +107,10 @@ codesign --remove-signature /Applications/zoom.us.app
 We will use [CamTwist](http://camtwiststudio.com) to create virtual camera for Mac.
 
 1. Install [Miniconda Python 3.7](https://docs.conda.io/en/latest/miniconda.html#macosx-installers) or use *Homebrew Cask*: `brew cask install miniconda`.
-2. [Download](https://github.com/alievk/avatarify/archive/master.zip) and unpack the repository or use `git`:
+2. [Download](https://github.com/parthsarthiprasad/sihcollablink/archive/master.zip) and unpack the repository or use `git`:
 ```bash
-git clone https://github.com/alievk/avatarify.git
-cd avatarify
+git clone https://github.com/parthsarthiprasad/sihcollablink.git
+cd sihcollablink
 bash scripts/install_mac.sh
 ```
 3. Download and install [CamTwist](http://camtwiststudio.com) from [here](http://camtwiststudio.com/download). It's easy.
@@ -125,15 +125,15 @@ This guide is tested for Windows 10.
 1. Install [Miniconda Python 3.7](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
 2. Install [Git](https://git-scm.com/download/win).
 3. Press Windows button and type "miniconda". Run suggested Anaconda Prompt.
-4. Download and install Avatarify (please copy-paste these commands and don't change them):
+4. Download and install Eye2Eye (please copy-paste these commands and don't change them):
 ```bash
-git clone https://github.com/alievk/avatarify.git
-cd avatarify
+git clone https://github.com/parthsarthiprasad/sihcollablink.git
+cd sihcollablink
 scripts\install_windows.bat
 ```
-5. [Download network weights](#download-network-weights) and place `vox-adv-cpk.pth.tar` file in the `avatarify` directory (don't unpack it).
+5. [Download network weights](#download-network-weights) and place `vox-adv-cpk.pth.tar` file in the `sihcollablink` directory (don't unpack it).
 6. Run `run_windows.bat`. If installation was successful, two windows "cam" and "avatarify" will appear. Leave these windows open for the next installation steps. <!--If there are multiple cameras (including virtual ones) in the system, you may need to select the correct one. Open `scripts/settings_windows.bat` and edit `CAMID` variable. `CAMID` is an index number of camera like 0, 1, 2, ...-->
-7. Install [OBS Studio](https://obsproject.com/) for capturing Avatarify output.
+7. Install [OBS Studio](https://obsproject.com/) for capturing Eye2Eye output.
 8. Install [VirtualCam plugin](https://obsproject.com/forum/resources/obs-virtualcam.539/). Choose `Install and register only 1 virtual camera`.
 9. Run OBS Studio.
 10. In the Sources section, press on Add button ("+" sign), select Windows Capture and press OK. In the appeared window, choose "[python.exe]: avatarify" in Window drop-down menu and press OK. Then select Edit -> Transform -> Fit to screen.
@@ -144,26 +144,26 @@ The steps 10-11 are required only once during setup.
 
 #### Remote GPU
 
-You can offload the heavy work to [Google Colab](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb) or a [server with a GPU](https://github.com/alievk/avatarify/wiki/Remote-GPU) and use your laptop just to communicate the video stream. The server and client software are native and dockerized available.
+You can offload the heavy work to [Google Colab](https://colab.research.google.com/github/alievk/parthsarthiprasad/blob/master/sihcollablink.ipynb) or a [server with a GPU](https://github.com/parthsarthiprasad/sihcollablink/wiki/Remote-GPU) and use your laptop just to communicate the video stream. The server and client software are native and dockerized available.
 
 ### Docker
 Docker images are only availabe on Linux.
 
 1. Install Docker following the [Documentation](https://docs.docker.com/engine/install/). Then run this [step](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to make docker available for your user.
 2. For using the gpu (hardly recommended): Install nvidia drivers and [nvidia docker](https://github.com/NVIDIA/nvidia-docker#quickstart).
-3. Clone `avatarify` and install its dependencies (v4l2loopback kernel module):
+3. Clone `Eye2Eye` and install its dependencies (v4l2loopback kernel module):
 ```bash
-git clone https://github.com/alievk/avatarify.git
-cd avatarify
+git clone https://github.com/parthsarthiprasad/sihcollablink.git
+cd sihcollablink
 bash scripts/install_docker.sh
 ```
 4. Build the Dockerfile:
 ```bash
-cd avatarify
-docker build -t avatarify .
+cd sihcollablink
+docker build -t sihcollablink .
 ```
 ## Setup avatars
-Avatarify comes with a standard set of avatars of famous people, but you can extend this set simply copying your avatars into `avatars` folder.
+Eye2Eye comes with a standard set of avatars of famous people, but you can extend this set simply copying your avatars into `avatars` folder.
 
 Follow these advices for better visual quality:
 * Make square crop of your avatar picture.
@@ -173,7 +173,7 @@ Follow these advices for better visual quality:
 ## Run
 Your web cam must be plugged-in.
 
-**Note:** run your video-conferencing app only after Avatarify is started.
+**Note:** run your video-conferencing app only after Eye2Eye is started.
 
 #### Linux
 The run script will create virtual camera `/dev/video9`. You can change these settings in `scripts/settings.sh`.
@@ -187,19 +187,19 @@ bash run.sh
 ```
 If you haven't installed a GPU add the `--no-gpus` flag. In order to use Docker add the `--docker` flag.
 
-`cam` and `avatarify` windows will pop-up. The `cam` window is for controlling your face position and `avatarify` is for the avatar animation preview. Please follow these [recommendations](#driving-your-avatar) to drive your avatars.
+`cam` and `sihcollablink` windows will pop-up. The `cam` window is for controlling your face position and `avatarify` is for the avatar animation preview. Please follow these [recommendations](#driving-your-avatar) to drive your avatars.
 
 #### Mac
-*Note*: On Mac Avatarify runs only with [Google Colab](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb) or a [dedicated server](https://github.com/alievk/avatarify/wiki/Remote-GPU) with GPU.
+*Note*: On Mac Eye2Eye runs only with [Google Colab](https://colab.research.google.com/github/parthsarthiprasad/sihcollablink/blob/master/avatarify.ipynb) or a [dedicated server](https://github.com/parthsarthiprasad/sihcollablink/wiki/Remote-GPU) with GPU.
 
-Please find where you downloaded `avatarify` and substitute path `/path/to/avatarify` below.
+Please find where you downloaded `sihcollablink` and substitute path `/path/to/sihcollablink` below.
 
 <!--1. Open terminal and run:
 ```bash
 cd /path/to/avatarify
 bash run_mac.sh --worker-host gpu_server_address
 ```-->
-1. To run Avatarify please follow instructions for [Google Colab](https://colab.research.google.com/github/alievk/avatarify/blob/master/avatarify.ipynb) or a [dedicated server](https://github.com/alievk/avatarify/wiki/Remote-GPU).
+1. To run Eye2Eye please follow instructions for [Google Colab](https://colab.research.google.com/github/parthsarthiprasad/avatarify/blob/master/avatarify.ipynb) or a [dedicated server](https://github.com/partsarthiprasad/avatarify/wiki/Remote-GPU).
 2. Go to [CamTwist](http://camtwiststudio.com).
 3. Choose `Desktop+` and press `Select`.
 4. In the `Settings` section choose `Confine to Application Window` and select `python (avatarify)` from the drop-down menu.
@@ -214,10 +214,10 @@ If there are multiple cameras (including virtual ones) in your system, you may n
 
 1. In Anaconda Prompt:
 ```
-cd C:\path\to\avatarify
+cd C:\path\to\sihcollablink
 run_windows.bat
 ```
-2. Run OBS Studio. It should automaitcally start streaming video from Avatarify to `OBS-Camera`.
+2. Run OBS Studio. It should automaitcally start streaming video from Eye2Eye to `OBS-Camera`.
 
 `cam` and `avatarify` windows will pop-up. The `cam` window is for controlling your face position and `avatarify` is for the avatar animation preview. Please follow these [recommendations](#driving-your-avatar) to drive your avatars.
 
